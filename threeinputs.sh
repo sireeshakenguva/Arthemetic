@@ -8,3 +8,5 @@ y=$(($a*$b+$c))
 echo "value of compute2 is:"$y
 z=$(($c+$a/$b))
 echo "value of compute3 is:"$z
+p=$(($a%$b+$c))
+echo "value of compute4 is:"$p
