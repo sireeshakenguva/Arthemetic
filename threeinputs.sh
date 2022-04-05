@@ -22,3 +22,15 @@ do
 arr_Result[$i]=${Result[$i]}
 done
 echo "value into array" ${arr_Result[@]}
+for ((i=1; i<=$((${#arr_Result[@]} - 1)); i++))
+do
+	for ((j=$((i + 1)); j<=${#arr_Result[@]} ; j++))
+	do
+		if [[ ${arr_Result[$i]} -lt ${arr_Result[$j]} ]]
+      		then
+               		tmp=${arr_Result[$i]}
+               		arr_Result[$i]=${arr_Result[$j]}
+               		arr_Result[$j]=$tmp
+       		fi
+      	done
+done
